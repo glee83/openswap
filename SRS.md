@@ -51,12 +51,3 @@ A) E-R DIAGRAM is 100% decentralized since no one is imposing a price or rates o
 
 
 ## 2. OVERALL DESCRIPTION
-
-
-
-
-
-
-
-
-
