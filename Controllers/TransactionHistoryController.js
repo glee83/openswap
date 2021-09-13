@@ -1,6 +1,6 @@
 class HistoryController {
     history(req, res, next) {
-        
+
         res.json(
             { 
                 user: 'Glee', 
@@ -10,6 +10,8 @@ class HistoryController {
             }
         );
     }
+
+    
 }
 
 module.exports = new HistoryController()
