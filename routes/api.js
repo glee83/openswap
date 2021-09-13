@@ -3,7 +3,6 @@ var router = express.Router();
 var PublicController = require('../Controllers/PublicController');
 var UserController = require('../Controllers/UserController');
 var TradeController = require('../Controllers/TradeController');
-const TransactionHistory = require('../Controllers/TransactionHistoryController')
 
 const CryptoCurrencyController = require('../Controllers/CryptoCurrencyController');
 const TransactionController = require('../Controllers/TransactionController');
@@ -27,7 +26,7 @@ router.get('/user/logout', UserController.logout)
 /* Trade Routes */
 router.get('/trades', TradeController.index);
 router.post('/trade', TradeController.save);
-router.get('/history', TransactionHistory.history)
+router.get('/history', UserController.history)
 router.post('/confirmTrade', TradeController.confirmTrade);
 
 /*CryptoCurrency Routes */

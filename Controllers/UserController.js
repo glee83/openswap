@@ -41,6 +41,23 @@ class UserController {
             }
         })
     }
+
+    history(req, res, next){
+        res.json({
+            id: String,
+            userId: String,
+            transaction: {
+                fromId:String,
+                toId:String,
+                transactionType: String,
+                amount:Number
+                
+            },
+            
+            currency: String,
+            success: Boolean,
+        })
+    }
   
 }
 
