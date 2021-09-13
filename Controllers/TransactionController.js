@@ -1,7 +1,19 @@
-class TransactionController {
+class TransactionController{
     index(req, res) {
         res.json({ message: "Total transactions", total: Number, transactions: [] })
     }
+
+    buy(req, res, next){
+        (!req.params.id)?res.json({message:'Tramsaction Failed '}):res.json({message:'Successful Transaction'})
+        next()
+    }
+    
+    sell(req, res, next){
+        (!req.params.id)?res.json({message:'Tramsaction Failed'}):res.json({message:'Successful Transaction'})
+        next()
+    }
+
+   
     details(req, res,next) {
         res.json({
             date: Date,
@@ -12,6 +24,8 @@ class TransactionController {
             data: []
         })
     }
+
+    
     deposit(req, res, next){
         res.json({
             id: String,
@@ -20,6 +34,7 @@ class TransactionController {
             message: "amount successfully deposited in account"
         })
     }
+
     withdraw(req,res,next){
         res.json({
             
@@ -28,4 +43,4 @@ class TransactionController {
 
 }
 
-module.exports =new TransactionController()
+module.exports = new TransactionController()

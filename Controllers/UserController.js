@@ -1,4 +1,5 @@
 class UserController {
+
     index(req, res, next) {
         res.json({ users: [] });
     }
@@ -10,6 +11,8 @@ class UserController {
             message: "User successfully registered"
         })
     }
+
+
     login(req, res, next) {
         res.json({
             success: true,
@@ -17,6 +20,14 @@ class UserController {
             message: "login successfully, you will be redirected to your account shortly"
         })
     }
+
+    logout(req,res,next){
+        res.json({
+        success: true,
+        message:"User logged out"
+        })
+    }
+
     account(req, res, next) {
         res.json({
             message: "Welcome to your dashboard",
@@ -30,12 +41,7 @@ class UserController {
             }
         })
     }
-    logout(req,res,next){
-        res.json({
-        success: true,
-        message:"User logged out"
-        })
-    }
+  
 }
 
 module.exports = new UserController()
