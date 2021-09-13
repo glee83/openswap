@@ -27,9 +27,7 @@ router.get('/user/logout', UserController.logout)
 /* Trade Routes */
 router.get('/trades', TradeController.index);
 router.post('/trade', TradeController.save);
-<<<<<<< HEAD
 router.get('/history', TransactionHistory.history)
-=======
 router.post('/confirmTrade', TradeController.confirmTrade);
 
 /*CryptoCurrency Routes */
@@ -40,6 +38,5 @@ router.get('/transactions', TransactionController.index);
 router.get('transaction/:id', TransactionController.details);
 router.post('/deposit', TransactionController.deposit);
 router.post('/withdraw', TransactionController.withdraw)
->>>>>>> 746fa7a3228522ec57adbf85c39bd01257e2da98
 
 module.exports = router;

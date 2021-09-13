@@ -10,8 +10,6 @@ class HistoryController {
             }
         );
     }
-
-    
 }
 
 module.exports = new HistoryController()
